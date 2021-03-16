@@ -49,6 +49,7 @@ cd /root/nginx-1.19.4;\
 --with-openssl=/root/openssl-1.0.2l;\
 make;\
 make install;\
+mkdir /usr/local/nginx/conf/vhost;\
 \cp /root/nginx.conf /usr/local/nginx/conf/nginx.conf;\
 \cp /root/nginx.service /etc/systemd/system/nginx.service;\
 ln -s /etc/systemd/system/nginx.service /etc/systemd/system/multi-user.target.wants/nginx.service;\
