@@ -23,6 +23,13 @@ docker run -dit \
 --privileged=true \
 --name=lnmp \
 2233466866/lnmp
+
+docker run -dit \
+-p 80:80 -p 443:443 -p 3306:3306 -p 9000:9000 \
+-v e:/HOST_WSL/nginx_vhost_docker:/usr/local/nginx/vhost \
+-v e:/SITE_WORKS2021/w-manage:/www \
+-v e:/HOST_WSL/mysql_data_4_docker:/data/mysql \
+--privileged=true --name=lnmpsdev sdev/lnmp
 ```
 ### 连接(Connect)
 ```
